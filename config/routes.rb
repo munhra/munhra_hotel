@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :rooms
   resources :users
+  #nome do controller home, que quer dizer HomeController
+  #seguido da ação # index
+  root 'home#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
