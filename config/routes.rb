@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :rooms
-  resources :users
+  
+  #scope ":locale" do
+    resources :rooms
+    resources :users
+  #end
   #nome do controller home, que quer dizer HomeController
   #seguido da ação # index
   root 'home#index'
