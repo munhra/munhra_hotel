@@ -38,6 +38,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 
 		if @user.save
+			Signup.confirm_email(@user).deliver
 			#envia ao browser um 302 redirect, para um endereço 
 			#que será retornado pelo metodo redirect_ro, redirencionando
 			#para ação show com o id do objeto o primeiro parametro
